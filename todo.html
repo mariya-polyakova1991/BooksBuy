@@ -16,31 +16,12 @@
     <div class="header__top">
       <div class="container container-max"></div>
       <div class="header__top-menu">
-        <!--    Made by Erik Terwan    -->
-        <!--   24th of November 2015   -->
-        <!--        MIT License        -->
         <nav role="navigation">
           <div id="menuToggle">
-            <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
             <input type="checkbox" />
-
-            <!--
-    Some spans to act as a hamburger.
-    
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
             <span></span>
             <span></span>
             <span></span>
-
-            <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
             <ul id="menu">
               <li><a href="#">Sign in</a></li>
               <li><a href="#">My Account</a></li>
@@ -328,17 +309,29 @@
               <form action="https://echo.htmlacademy.ru" method="post">
                 <div>
                   <label for="login-field">Your name</label>
-                  <input type="text" name="login" id="login-field" />
+                  <input type="text" name="login" id="login-field" required />
                 </div>
                 <div>
                   <label for="email-field">email</label>
-                  <input type="email" name="email" id="email-field" />
+                  <input type="email" name="email" id="email-field" required />
                 </div>
                 <div class="form-textarea">
-                  <label for="comment-fieпгld">Message</label>
-                  <textarea name="comment" id="comment-field"></textarea>
+                  <label for="comment-field">Message</label>
+                  <textarea
+                    name="comment"
+                    id="comment-field"
+                    required
+                  ></textarea>
                 </div>
-                <button>Submit</button>
+                <button class="button-open">Submit</button>
+                <section class="modal">
+                  <div class="modal__content">
+                    <p id="comment-list"></p>
+                    <button class="modal__button button-close" type="button">
+                      Закрыть
+                    </button>
+                  </div>
+                </section>
               </form>
             </div>
           </div>
@@ -428,7 +421,8 @@
     </section>
   </footer>
   <body>
-    <script src="js/libs.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/button.js"></script>
+
+    <script src="js/popup.js"></script>
   </body>
 </html>
